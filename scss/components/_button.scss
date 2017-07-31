@@ -1,0 +1,10 @@
+.btn{
+    text-transform:uppercase;
+    padding:12px 19px;
+    transition:all 0.3s;
+    display:inline-block;
+    border-radius:2px;
+    &:hover{
+        text-decoration:none;
+    }
+}
