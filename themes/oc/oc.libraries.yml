@@ -1,0 +1,15 @@
+style:
+  version: VERSION
+  css:
+    theme:
+      css/font-awesome.css: {}
+      css/slick.css: {}
+      css/slick-theme.css: {}
+      css/main.css: {}
+  js:
+    js/slick.js: {}
+    js/main.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+

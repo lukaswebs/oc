@@ -1,0 +1,30 @@
+footer{
+    .socials{
+        padding:30px;
+        text-align:center;
+        border-bottom:1px solid #4e525b;
+        .fa{
+            padding:0 10px;
+            color:$brand-color;
+            font-size:20px;
+            &:hover{
+                color:$text-color-white;
+            }
+        }
+    }
+    .copyright{
+        text-align:center;
+        padding:20px 0;
+        p{
+            margin:0;
+            color:#979eb1;
+            a{
+                color:$brand-color;
+                &:hover{
+                    color:$text-color-white;
+                    text-decoration:none;
+                }
+            }
+        }
+    }
+}

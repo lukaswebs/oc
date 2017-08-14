@@ -1,0 +1,12 @@
+name: oc
+type: theme
+description: Open Charity Theme
+core: 8.x
+libraries:
+  - oc/style
+regions:
+  brand: Brand
+  menu: Menu
+  content: Content
+  footer: Footer
+

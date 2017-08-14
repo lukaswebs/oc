@@ -1,0 +1,118 @@
+<header style="background-image:url({{ file_url(node.field_top_block_background.entity.fileuri) }});">
+	<div class="container">
+		 <h2 class="section-heading">{{ content.field_top_block_title[0] }}</h2>
+		 <div class="section-description">
+			<h4>{{ content.field_top_block_h4[0] }}</h4>
+			<p>{{ content.field_top_block_[0] }}</p>
+		</div>
+	 </div>
+</header>
+<section class="event">
+	<div class="container">
+		<div class="row">
+			<div class="twelve columns">
+				<div class="event-block">
+					<h4><span>{{ content.field_event_block_event_title[0] }}</span> {{ content.field_event_block_event_date[0] }}</h4>
+					<p>{{ content.field_event_block_event_location[0] }}</p>
+				</div>
+				 <a href="{{ content.field_event_block_event_link[0] }}" rel="nofollow" class="register btn brand">{{ content.field_event_block_button_text[0] }}</a>
+			</div>
+		   
+		</div>
+	</div>
+</section>
+<section class="involved white">
+	<div class="container">
+		<h3 class="section-heading">{{ content.field_get_involved_title[0] }}</h3>
+		<div class="row">
+			{% for i, value in content.field_get_involved_objects %}
+				{% if node.field_get_involved_objects[i].entity %}
+
+			    <div class="item one-third column">
+					<div class="logo">
+						<img src="{{ file_url(node.field_get_involved_objects[i].entity.field_grid_image.entity.fileuri) }}" alt="" />
+					</div>
+					<div class="content">
+						<h4>{{ node.field_get_involved_objects[i].entity.title.value }}</h4>
+						<p>{{ node.field_get_involved_objects[i].entity.field_short_description.value }}</p>
+						<a href="{{ node.field_get_involved_objects[i].entity.field_button_link.value }}" rel="nofollow" class="btn group">{{ node.field_get_involved_objects[i].entity.field_button_text.value }}</a>
+					</div>
+				</div>
+			   {% endif %}
+			{% endfor %}
+		 </div>
+	</div>
+</section>
+
+<section class="mission grey">
+	 <div class="container">
+		<h3 class="section-heading">{{ content.field_section[0] }}</h3>
+		<p>{{ content.field_block_mission_p[0] }}</p>
+		<h4>{{ content.field_mission_block_h4[0] }}</h4>
+
+		<div class="row missions">
+		{% for i, value in content.field_our_m %}
+			{% if node.field_our_m[i].entity %}
+
+			<div class="item one-third column">
+				<span class="icon" style="background-image:url({{ file_url(node.field_our_m[i].entity.field_icon.entity.fileuri) }})"></span>
+				<h5>{{ node.field_our_m[i].entity.title.value }}</h5>
+				<p>{{ node.field_our_m[i].entity.field_description.value }}</p>
+			</div>
+			{% endif %}
+		{% endfor %}
+		</div>
+		
+		<hr>
+		
+		<div class="members">
+			<h3 class="section-heading">{{ content.field_members_block_title[0] }}</h3>
+			<div class="regular slider">
+			{% for i, value in content.field_member_objects %}
+				{% if node.field_member_objects[i].entity %}
+				<div>
+					<a href="{{ node.field_member_objects[i].entity.field_member_link.value }}">
+						<img src="{{ file_url(node.field_member_objects[i].entity.field_member_logo.entity.fileuri) }}" alt="" />
+					</a>
+				</div>
+				{% endif %}
+			{% endfor %}
+			</div>
+		</div>
+	
+	</div>
+</section>
+
+<section class="blog white">
+	<div class="container">
+		<h3 class="section-heading">{{ content.field_blog_section_title[0] }}</h3>
+		<div class="center slider">
+		{% for i, value in content.field_blog_objects %}
+			{% if node.field_blog_objects[i].entity %}
+			<div>
+				<div class="blog-post">
+					<a href="{{ path('entity.node.canonical', {'node': node.field_blog_objects[i].entity.id}) }}">{{ node.field_blog_objects[i].entity.title.value }}</a>
+					<p>{{ node.field_blog_objects[i].entity.field_short_content.value }}</p>
+					<span class="date">{{ node.field_blog_objects[i].entity.getCreatedTime|format_date('short') }}</span>
+				</div>
+			</div>
+			{% endif %}
+		{% endfor %}
+		</div>
+	</div>
+</section>
+
+<footer class="dark-grey">
+	<div class="container">
+		<div class="socials">
+			<div class="icons">
+				<a href="{{ content.field_facebook_link[0] }}" target="_blank"><i class="fa fa-icon-facebook" aria-hidden="true"></i></a>
+				<a href="{{ content.field_twitter_link[0] }}" target="_blank"><i class="fa fa-icon-twitter" aria-hidden="true"></i></a>
+				<a href="{{ content.field_google_link[0] }}" target="_blank"><i class="fa fa-icon-google-plus" aria-hidden="true"></i></a>
+			</div>
+		</div>
+		<div class="copyright">
+			<p>{{ content.field_copyright[0] }} - <a href="{{ content.field_poweredby_link[0] }}">{{ content.field_poweredby[0] }}</a></p>
+		</div>
+	</div>
+</footer>

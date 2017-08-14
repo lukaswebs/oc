@@ -1,0 +1,138 @@
+nav{
+    padding:20px 0 12px 0;
+    position:relative;
+    overflow:visible;
+    .logo{
+        padding:8px 0 5px 0;
+        display:inline-block;
+        float:left;
+    }
+    .navbar{
+        float:right;
+        margin:0;
+        padding:0;
+         @media (max-width:768px){
+            display:none;
+        }
+        li{
+            display:inline;
+            padding:0 15px;
+            &:last-child{
+                padding-right:0;
+            }
+            .nav-link{
+                color:$heading-color;
+                text-transform:uppercase;
+                &:hover{
+                    text-decoration:none;
+                    color:$brand-color;
+                }
+                &.btn{
+                    color:$brand-color;
+                    border:1px solid $brand-color;
+                    padding:7px 28px;
+                    &:hover{
+                        background: #5fc0c3;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+    .collapse{
+        width: 40px;
+        height: 40px;
+        background: url(../img/menu.png) no-repeat center center;
+        float: right;
+        cursor: pointer;
+        display: none;
+        &.active{
+            background:$brand-color url(../img/menu-active.png) no-repeat center center;
+            
+        }
+        @media (max-width:768px){
+            display:block;
+        }
+    }
+    .mobile-nav{
+        position:absolute;
+        z-index:9;
+        left:0;
+        top:75px;
+        background:#fff;
+        width:100%;
+        display:none;
+        
+        .mobile-navbar{
+            text-align:center;
+            padding:0;
+            li{
+                display:block;
+                padding:10px 0;
+                .nav-link{
+                    color:$heading-color;
+                    text-transform:uppercase;
+                    &:hover{
+                        text-decoration:none;
+                        color:$brand-color;
+                    }
+                    &.btn{
+                        color:$brand-color;
+                        border:1px solid $brand-color;
+                        padding:7px 20px;
+                        &:hover{
+                            background: #5fc0c3;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+header{
+    overflow:hidden;
+    padding:4vw 0;
+    background-repeat:no-repeat;
+    background-size:cover;
+    max-height:458px;
+    .section-description {
+        max-width: 57%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align:center;
+        @media (max-width:920px){
+            max-width: 100%;
+        }
+        h4{
+            line-height:33px;
+            @media (max-width:768px){
+                line-height: 25px;
+                font-size: 17px;
+                margin:15px 0;
+            }
+        }
+        p{
+            line-height:23px;
+        }
+    }
+    p, h2, h4{
+        color:$text-color-white !important;
+    }
+    .section-heading{
+        font-size:$hero-size;
+        @media (max-width:920px){
+            font-size:40px;
+        }
+        @media (max-width:768px){
+            font-size: 34px;
+            line-height: 38px;
+            margin-bottom:25px;
+        }
+        @media (max-width:480px){
+            font-size: 30px;
+            line-height: 34px;
+        }
+    }
+
+}
